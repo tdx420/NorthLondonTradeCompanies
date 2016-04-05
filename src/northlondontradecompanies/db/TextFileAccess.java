@@ -16,10 +16,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import northlondontradecompanies.core.Administrator;
 import northlondontradecompanies.core.Company;
 import northlondontradecompanies.core.ValidationException;
@@ -106,7 +108,9 @@ class TextFileAccess {
             System.out.println(fnf.getMessage());
         } catch (IOException ioe) {
            System.out.println(ioe.getMessage());
-        }  
+        }catch(NoSuchElementException fnf){
+        	  System.out.println(fnf.getMessage());
+        }
 
 
 
